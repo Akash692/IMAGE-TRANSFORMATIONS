@@ -139,3 +139,48 @@ rotated_image = cv2.warpAffine(image, M_rotation, (width, height))
 plt.imshow(cv2.cvtColor(rotated_image, cv2.COLOR_BGR2RGB))
 plt.title("Rotated Image")
 plt.axis("off")
+```
+
+## vii)Image Cropping
+```
+angle = 145
+center = (673 // 2, 419 // 2)
+M_rotation=cv2.getRotationMatrix2D(center, angle, 1)  
+rotated_image = cv2.warpAffine(image, M_rotation, (width, height))
+```
+
+```
+plt.imshow(rotated_image[:,:,::-1])
+plt.title("Rotated Image")
+plt.axis("off")
+plt.show()
+```
+
+## Output:
+### i) Original Image
+
+<img width="561" height="642" alt="image" src="https://github.com/user-attachments/assets/f9464d96-e4dd-41e5-82ab-b7e3343c077b" />
+
+### ii)Image Translation
+
+<img width="842" height="559" alt="image" src="https://github.com/user-attachments/assets/64032811-3996-4a27-8ec8-da082eb4323b" />
+
+
+### iv)Image shearing
+
+<img width="804" height="543" alt="image" src="https://github.com/user-attachments/assets/7677b48f-b153-4ce4-8194-89c73fbed286" />
+
+
+### v)Image Reflection
+
+<img width="412" height="707" alt="image" src="https://github.com/user-attachments/assets/740ed224-5695-41c0-9882-76f069796a24" />
+
+
+### vi)Image Rotation
+<img width="508" height="618" alt="image" src="https://github.com/user-attachments/assets/ddcb87d9-4040-44a6-8b46-4b37f24d25d4" />
+
+
+
+## Result: 
+
+Thus the different image transformations such as Translation, Scaling, Shearing, Reflection, Rotation and Cropping are done using OpenCV and python programming.
